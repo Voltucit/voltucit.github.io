@@ -241,15 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-}
-
-@-webkit-keyframes rainbow {
-   /* 动态切换背景颜色. */
-}
-
-@keyframes rainbow {
-    /* 动态切换背景颜色. */
+    background-image: linear-gradient(to right, #f093fb 0%, #f5576c 100%);
 }
 
 .text-color {
@@ -559,8 +551,10 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    /* 禁用 rainbow 动画，让背景图显示 */
+    -webkit-animation: none;
+    animation: none;
+    background: transparent; /* 设置为透明 */
 }
 
 .bg-cover:before,
