@@ -350,16 +350,15 @@
     </div>
 </div>
 
+<script>
+    (() => {
+        const bannerUrl = 'https://api.elaina.cat/random/?t=' + Math.random();
+        for (const cover of document.querySelectorAll('.bg-cover')) {
+            cover.style.backgroundImage = 'url("' + bannerUrl + '"), var(--cover-fallback-image, none)';
+        }
+    })();
+</script>
 
-    <script>
-        // 使用 API 随机获取 banner 图
-        var apiUrl = 'https://api.elaina.cat/random/';
-        // 添加随机参数确保每次获取不同的图片
-        var bannerUrl = apiUrl + '?t=' + Math.random();
-        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-        $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-    </script>
-    
 
     </div>
 </div>

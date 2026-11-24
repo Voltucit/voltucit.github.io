@@ -5,10 +5,11 @@
 }
 
 .bg-cover.guestbook-cover {
+    --cover-fallback-image: url("../medias/banner/0.jpg");
     height: clamp(260px, 36vh, 360px);
     padding-top: 64px;
     background-color: #34495e;
-    background-image: url("../medias/banner/0.jpg");
+    background-image: var(--cover-fallback-image);
 }
 
 .guestbook-cover::before {
