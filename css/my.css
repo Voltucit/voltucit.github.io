@@ -1,1 +1,82 @@
 /* Here is your custom css styles. */
+
+#contact {
+    --guestbook-padding: clamp(20px, 4vw, 42px);
+}
+
+.bg-cover.guestbook-cover {
+    height: clamp(260px, 36vh, 360px);
+    padding-top: 64px;
+    background-color: #34495e;
+    background-image: url("../medias/banner/0.jpg");
+}
+
+.guestbook-cover::before {
+    background: rgba(0, 0, 0, .48);
+}
+
+.guestbook-cover .container {
+    padding-inline: var(--guestbook-padding);
+}
+
+.guestbook-cover h1 {
+    margin: 0 0 26px;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.15;
+    font-weight: 600;
+    color: #fff;
+}
+
+#contact .guestbook-card {
+    box-shadow: none !important; /* taste-skill-ignore: clears Matery's card shadow */
+}
+
+#contact .guestbook-card .card-content {
+    padding: var(--guestbook-padding);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+#contact .guestbook-card h2 {
+    margin: 0 0 .5em;
+    font-size: 1.5rem;
+    line-height: 1.35;
+}
+
+#contact .guestbook-notice,
+#contact .guestbook-link {
+    margin-top: 1rem;
+}
+
+#guestbook-comments {
+    margin-top: 1.5rem;
+}
+
+#contact .guestbook-link a {
+    color: #166b52;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+
+body.DarkMode #contact .guestbook-link a {
+    color: #8fddbe;
+}
+
+@media (max-width: 600px) {
+    body:has(#contact) #headNav .brand-logo {
+        max-width: calc(100% - 140px);
+    }
+
+    body:has(#contact) #headNav .brand-logo a {
+        display: flex;
+        align-items: center;
+        gap: .45rem;
+    }
+
+    body:has(#contact) #headNav .logo-span {
+        overflow: hidden;
+        font-size: 1.2rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
